@@ -1,8 +1,40 @@
 <!DOCTYPE html>
-
 <html>
-  <title>我的博客</title>
-  <body>
-    这是内容
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>静阁的博客</title>
+  <script src="https://cdn.bootcss.com/marked/0.3.19/marked.js"></script>
+  <link rel="stylesheet" href="https://typo.sofi.sh/typo.css">
+  <style>
+    body{
+      padding: 16px;
+    }
+    img{
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    
+    var markdown = `
+# 我的第一篇博客
+
+**静阁**
+
+> 不要相信网上的名人名言 —— 鲁迅
+
+hello , everyone ! welcome my blog ! [我的博客地址](https://yuejingge.github.io/blog20180509/)
+
+<img src="http://img0.imgtn.bdimg.com/it/u=2352868711,4020842355&fm=27&gp=0.jpg">
+`;
+    
+    var html = marked(markdown);
+    
+    document.getElementById('app').innerHTML = html;
+    
+  </script>
+</body>
 </html>
